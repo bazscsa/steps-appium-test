@@ -1,0 +1,37 @@
+name: Run Appium tests on the generated
+description: |
+  Performs Appium tests 
+# website: can be the step's github page or a dedicated website if you have one
+website: https://website.url/of/your/step
+
+source:
+  git: https://github.com/your-github-user/the-github-step-repo.git
+
+host_os_tags:
+  - osx-10.9
+
+type_tags:
+  - uiautomation
+  - uitest
+  - automatedtest
+
+is_requires_admin_user: false
+
+inputs:
+  - title: |
+      Device to run the tests with, will be appended to the "platform=iOS Simulator,name=" `-destination` flag of the xcodebuild command. Default is "iPad". For other simulator devices set it as it is shown in Xcode's device selection dropdown UI.
+    mapped_to: UNITTEST_PLATFORM_NAME
+  - title: |
+      The iOS version of the simulator that should be used for testing
+    mapped_to: IOS_VERSION
+  - title: |
+      Appium script that runs the tests created for the given project
+    mapped_to: APPIUM_MAIN_SCRIPT
+
+outputs:
+  - title: |
+      Zip file created from the folder that contains the screenshots created during the tests
+    mapped_to: APPIUM_SCREENSHOT_ZIP_PATH
+  - title: |
+      Zip file created from the logs created during the tests
+    mapped_to: APPIUM_LOG_ZIP_PATH
