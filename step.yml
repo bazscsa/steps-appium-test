@@ -1,15 +1,12 @@
-name: Run Appium tests on the generated
+name: |
+  Run Appium tests on the generated
 description: |
   Performs Appium tests 
-# website: can be the step's github page or a dedicated website if you have one
-website: https://website.url/of/your/step
-
+website: https://github.com/bazscsa/steps-appium-test
 source:
-  git: https://github.com/your-github-user/the-github-step-repo.git
-
+  git: https://github.com/bazscsa/steps-appium-test.git
 host_os_tags:
   - osx-10.9
-
 type_tags:
   - uiautomation
   - uitest
