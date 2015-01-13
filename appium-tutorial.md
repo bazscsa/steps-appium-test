@@ -12,8 +12,8 @@ The AppPath (path to the .app file) has to be added to the appium driver's desir
 
 eg.:
 The start of the main ruby base appium test file
+    
     APP_PATH = '../../../../AppiumSwiftTestApp/build/release-iphonesimulator/AppiumSwiftTestApp.app'
-
     desired_caps = {
       caps:       {
         platformName:  'iOS',
